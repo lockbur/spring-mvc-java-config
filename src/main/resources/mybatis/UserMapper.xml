@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lockbur.visit.dao.UserDao">
+
+    <insert id="insert" parameterType="com.lockbur.visit.model.User" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_user
+        (
+        identify,name,created_time,modified_time
+        )
+        VALUES
+        (
+          #{identify},#{name},now(),now()
+        )
+    </insert>
+</mapper>
