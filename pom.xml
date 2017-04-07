@@ -135,12 +135,18 @@
             <version>1.3.2</version>
         </dependency>
 
-
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.5</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.1</version>
+        </dependency>
+
         <!-- mysql5.1.30 驱动包 -->
         <dependency>
             <groupId>mysql</groupId>
@@ -153,6 +159,7 @@
             <artifactId>velocity</artifactId>
             <version>1.6.2</version>
         </dependency>
+
 
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -222,7 +229,7 @@
                     <stopPort>9090</stopPort>
                     <scanIntervalSeconds>1</scanIntervalSeconds>
                     <httpConnector>
-                        <port>8080</port>
+                        <port>80</port>
                     </httpConnector>
                 </configuration>
             </plugin>

@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
+ * 公有的一些配置信息，邮件和短信等
  * Created by wangkun23 on 2017/3/23.
  */
 @Configuration
