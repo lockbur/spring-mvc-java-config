@@ -65,7 +65,7 @@ public class WechatApi20 extends DefaultApi20 {
         //授权请求地址
        // return parameters.appendTo("https://open.weixin.qq.com/connect/oauth2/authorize");
        //扫码登录
-        return parameters.appendTo("https://open.weixin.qq.com/connect/qrconnect");
+        return parameters.appendTo("https://open.weixin.qq.com/connect/oauth2/authorize");
     }
 
     @Override
