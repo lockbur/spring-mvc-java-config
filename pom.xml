@@ -226,7 +226,7 @@
                 <version>9.3.14.v20161028</version>
                 <configuration>
                     <stopKey>fookey</stopKey>
-                    <stopPort>9090</stopPort>
+                    <stopPort>9080</stopPort>
                     <scanIntervalSeconds>1</scanIntervalSeconds>
                     <httpConnector>
                         <port>80</port>
