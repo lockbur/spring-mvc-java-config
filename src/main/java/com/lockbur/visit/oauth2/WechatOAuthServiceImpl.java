@@ -18,17 +18,19 @@ public class WechatOAuthServiceImpl extends OAuth20Service {
     }
 
     @Override
-    protected OAuthRequest createAccessTokenRequest(String oauthVerifier) {
+    protected OAuthRequest createAccessTokenRequest(String code) {
         final DefaultApi20 api = getApi();
 
         final OAuthRequest request = new OAuthRequest(api.getAccessTokenVerb(), api.getAccessTokenEndpoint());
+
         final OAuthConfig config = getConfig();
 //        request.addBodyParameter(OAuthConstants.CLIENT_ID, config.getApiKey());
         request.addBodyParameter("appid", config.getApiKey());
 //        request.addBodyParameter(OAuthConstants.CLIENT_SECRET, config.getApiSecret());
         request.addBodyParameter("secret", config.getApiSecret());
+
         request.addBodyParameter(OAuthConstants.GRANT_TYPE, OAuthConstants.AUTHORIZATION_CODE);
-        request.addBodyParameter(OAuthConstants.CODE, oauthVerifier);
+        request.addBodyParameter(OAuthConstants.CODE, code);
 
         final String scope = config.getScope();
         if (scope != null) {

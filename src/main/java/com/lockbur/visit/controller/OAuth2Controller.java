@@ -66,7 +66,9 @@ public class OAuth2Controller {
             final OAuth2AccessToken accessToken = service.getAccessToken(code);
 
             final OAuthRequest request = new OAuthRequest(Verb.GET, PROTECTED_RESOURCE_URL);
+
             service.signRequest(accessToken, request);
+
             final Response response = service.execute(request);
             logger.info("Got it! Lets see what we found...");
 
@@ -89,14 +91,13 @@ public class OAuth2Controller {
      * @param nonce
      * @param echostr
      */
-    @RequestMapping(value = "/weixincheck", method = RequestMethod.GET)
+    @RequestMapping(value = "/wechatCheck", method = RequestMethod.GET)
     @ResponseBody
-    public String weixincheck(String signature, String timestamp, String nonce, String echostr) {
+    public String wechatCheck(String signature, String timestamp, String nonce, String echostr) {
         logger.info("signature {}", signature);
         logger.info("timestamp {}", timestamp);
         logger.info("nonce {}", nonce);
         logger.info("echostr {}", echostr);
-
         return echostr;
     }
 
