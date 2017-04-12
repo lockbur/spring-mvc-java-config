@@ -57,7 +57,7 @@ public class OAuth2Controller {
      * @link http://mp.weixin.qq.com/wiki/4/9ac2e7b1f1d22e9e57260f6553822520.html
      * @link 如果用户同意授权，页面将跳转至 redirect_uri/?code=CODE&state=STATE
      */
-    @RequestMapping("/github/callback")
+    @RequestMapping("/wechat/callback")
     public String callback(String code, String state, Model model) {
         OAuth20Service service = wechatOAuth2Service.getService();
         logger.info("callBack code {}", code);
