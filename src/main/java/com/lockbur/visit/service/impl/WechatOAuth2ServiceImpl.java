@@ -28,7 +28,7 @@ public class WechatOAuth2ServiceImpl implements WechatOAuth2Service {
                     .apiKey("wx196f86cdd6bd4221")
                     .apiSecret("a1c61cb626ac281b314de7be779e2d20")
                     .callback("http://weixin.lockbur.com/oauth2/wechat/callback")
-                    .scope("snsapi_login")
+                    .scope("snsapi_base")
 //                    .scope("snsapi_base")
                     .build(WechatApi20.instance());
 //            service = new ServiceBuilder()
